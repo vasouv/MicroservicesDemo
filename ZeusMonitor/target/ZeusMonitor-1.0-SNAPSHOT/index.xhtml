@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Zeus Nuclear Reactor Monitoring System</title>
+    </h:head>
+    <h:body>
+        <h1>Zeus - Nuclear Reactor Monitoring System</h1>
+        <h:form>
+            <h:panelGrid columns="2" width="100%" cellpadding="10" cellspacing="10">
+                <p:fieldset legend="Apollo">
+                    <h:outputText style="font-size: 48px" value="#{temperatureManager.apolloTemperature}"/>
+                </p:fieldset>
+                <p:fieldset legend="Artemis">
+                    <h:outputText style="font-size: 48px" value="#{temperatureManager.artemisTemperature}"/>
+                </p:fieldset>
+                <p:fieldset legend="Poseidon">
+                    <h:outputText style="font-size: 24px" value="#{temperatureManager.poseidonSupervisor}"/>
+                </p:fieldset>
+                <p:fieldset legend="Acceptable Temperatures">
+                    <h:outputText value="Apollo: 260 - 430 Celsius"/><br/>
+                    <h:outputText value="Artemis: 300 - 480 Celsius"/>
+                </p:fieldset>
+            </h:panelGrid>
+        </h:form>
+
+    </h:body>
+</html>
